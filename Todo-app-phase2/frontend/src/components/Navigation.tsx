@@ -7,7 +7,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { useAuth, useLogout } from "@/lib/auth-client";
+import { useAuth, useLogout } from "../lib/auth-client";
 import { useRouter } from "next/navigation";
 
 export function Navigation() {

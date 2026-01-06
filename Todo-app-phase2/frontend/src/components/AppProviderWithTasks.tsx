@@ -2,8 +2,8 @@
 
 import { useState, useRef, ReactNode } from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import ClientNavigation from '@/components/ClientNavigation';
-import TasksPageClient from '@/components/TasksPageClient';
+import ClientNavigation from '../components/ClientNavigation';
+import TasksPageClient from '../components/TasksPageClient';
 
 export default function AppProviderWithTasks() {
   const queryClientRef = useRef<QueryClient | null>(null);

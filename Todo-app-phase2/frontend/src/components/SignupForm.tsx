@@ -2,7 +2,7 @@
 
 import { useState, FormEvent } from "react";
 import { useRouter } from "next/navigation";
-import { signUp } from "@/lib/auth-client";
+import { signUp } from "../lib/auth-client";
 
 export default function SignupForm() {
   const router = useRouter();

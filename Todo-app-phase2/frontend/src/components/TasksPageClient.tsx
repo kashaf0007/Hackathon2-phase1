@@ -1,7 +1,7 @@
 'use client';
 
-import { AuthGuard } from "@/components/AuthGuard";
-import { TaskList } from "@/components/TaskList";
+import { AuthGuard } from "../components/AuthGuard";
+import { TaskList } from "../components/TaskList";
 
 export default function TasksPageClient() {
   return (

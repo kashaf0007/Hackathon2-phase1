@@ -2,7 +2,7 @@
 
 import { useState, useRef, ReactNode } from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import ClientNavigation from '@/components/ClientNavigation';
+import ClientNavigation from '../components/ClientNavigation';
 
 export default function AppProvider({ children }: { children: ReactNode }) {
   const queryClientRef = useRef<QueryClient | null>(null);

@@ -7,7 +7,7 @@
 "use client";
 
 import { useState, FormEvent } from "react";
-import type { TaskCreate } from "@/types/task";
+import type { TaskCreate } from "../types/task";
 
 interface TaskFormProps {
   onSubmit: (task: TaskCreate) => void;
