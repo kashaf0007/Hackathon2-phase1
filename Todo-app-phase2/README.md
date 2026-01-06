@@ -30,6 +30,18 @@ See `specs/001-fullstack-todo-app/quickstart.md` for detailed setup instructions
 4. Run frontend: `cd frontend && npm install && npm run dev`
 5. Visit: http://localhost:3000
 
+## Vercel Deployment
+
+To deploy the frontend on Vercel, follow these steps:
+
+1. Push your code to a GitHub repository
+2. Connect your repository to Vercel
+3. In the Vercel dashboard, set the following environment variables:
+   - `NEXT_PUBLIC_API_URL`: The URL of your deployed backend API (e.g., `https://your-backend-app.vercel.app` or your production backend URL)
+   - `BETTER_AUTH_SECRET`: The same JWT secret used in your backend
+4. Set the build command to: `cd frontend && npm install && npm run build`
+5. Set the output directory to: `frontend/.next`
+
 ## Documentation
 - Specification: `specs/001-fullstack-todo-app/spec.md`
 - Implementation Plan: `specs/001-fullstack-todo-app/plan.md`

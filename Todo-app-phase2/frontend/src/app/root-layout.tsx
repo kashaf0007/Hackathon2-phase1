@@ -1,15 +1,14 @@
 /**
- * Root Layout
- * Contains global styles and providers
+ * Root Layout (Server Component)
+ * Contains only server-side code, no client hooks
  */
 
 import "./globals.css";
-import { ReactNode } from 'react';
 
 export default function RootLayout({
   children,
 }: {
-  children: ReactNode;
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
