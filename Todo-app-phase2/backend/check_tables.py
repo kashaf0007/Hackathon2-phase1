@@ -28,3 +28,4 @@ with engine.connect() as conn:
     print("\nAvailable schemas:")
     for schema in schemas:
         print(f"  - {schema[0]}")
+
