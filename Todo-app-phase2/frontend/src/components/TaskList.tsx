@@ -52,7 +52,7 @@ export function TaskList() {
     return (
       <div className="task-list-loading flex flex-column justify-center align-center">
         <div className="spinner"></div>
-        <p className="mt-md text-secondary-600">Loading your tasks...</p>
+        <p className="mt-md text-secondary-200">Loading your tasks...</p>
       </div>
     );
   }
@@ -60,8 +60,8 @@ export function TaskList() {
   // Error state
   if (fetchError) {
     return (
-      <div className="card p-lg mt-lg">
-        <div className="error-message">
+      <div className="card p-lg mt-lg bg-white/10 backdrop-blur-lg border border-white/20 shadow-xl">
+        <div className="error-message bg-red-500/20 border border-red-400/30 text-red-100 backdrop-blur-sm">
           Error loading tasks: {(fetchError as Error).message}
         </div>
       </div>
@@ -79,13 +79,13 @@ export function TaskList() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
               </svg>
             </div>
-            <h2 className="mb-md">No tasks yet</h2>
-            <p className="text-secondary-600 mb-lg">
+            <h2 className="mb-md text-white">No tasks yet</h2>
+            <p className="text-secondary-200 mb-lg">
               Get started by creating your first task
             </p>
             <button
               onClick={() => setShowForm(true)}
-              className="btn btn-primary task-list-create-btn flex align-center justify-center"
+              className="btn btn-primary task-list-create-btn flex align-center justify-center bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
@@ -96,9 +96,9 @@ export function TaskList() {
         )}
 
         {showForm && (
-          <div className="task-list-form card p-lg">
+          <div className="task-list-form card p-lg bg-white/10 backdrop-blur-lg border border-white/20 shadow-xl">
             {error && (
-              <div className="error-message mb-lg">
+              <div className="error-message mb-lg bg-red-500/20 border border-red-400/30 text-red-100 backdrop-blur-sm">
                 {error}
               </div>
             )}
@@ -120,7 +120,7 @@ export function TaskList() {
         <div className="mb-lg">
           <button
             onClick={() => setShowForm(true)}
-            className="btn btn-primary task-list-add-btn flex align-center justify-center"
+            className="btn btn-primary task-list-add-btn flex align-center justify-center bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5"
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
@@ -131,9 +131,9 @@ export function TaskList() {
       )}
 
       {showForm && (
-        <div className="task-list-form card p-lg mb-lg">
+        <div className="task-list-form card p-lg mb-lg bg-white/10 backdrop-blur-lg border border-white/20 shadow-xl">
           {error && (
-            <div className="error-message mb-lg">
+            <div className="error-message mb-lg bg-red-500/20 border border-red-400/30 text-red-100 backdrop-blur-sm">
               {error}
             </div>
           )}
