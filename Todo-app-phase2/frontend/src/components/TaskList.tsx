@@ -7,8 +7,8 @@
 
 import { useState } from "react";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
-import { useAuth } from "src/lib/auth-client";
-import { taskApi } from "src/lib/api";
+import { useAuth } from "@/lib/auth-client";
+import { taskApi } from "@/lib/api";
 import { TaskItem } from "./TaskItem";
 import { TaskForm } from "./TaskForm";
 import type { TaskCreate } from "../types/task";

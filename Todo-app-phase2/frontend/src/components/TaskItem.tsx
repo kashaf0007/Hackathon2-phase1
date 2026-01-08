@@ -7,7 +7,7 @@
 
 import { useState } from "react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { taskApi } from "src/lib/api";
+import { taskApi } from "@/lib/api";
 import type { Task } from "../types/task";
 
 interface TaskItemProps {

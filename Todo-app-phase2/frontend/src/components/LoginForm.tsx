@@ -2,7 +2,7 @@
 
 import { useState, FormEvent } from "react";
 import { useRouter } from "next/navigation";
-import { signIn } from "src/lib/auth-client";
+import { signIn } from "@/lib/auth-client";
 
 export default function LoginForm() {
   const router = useRouter();

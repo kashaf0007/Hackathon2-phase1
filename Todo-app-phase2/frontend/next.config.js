@@ -4,17 +4,16 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  // Explicitly disable Turbopack to force webpack
   experimental: {
     turbo: {
       enabled: false
     }
   },
   webpack: (config, { isServer }) => {
-    // Ensure that the 'src' alias is properly resolved by webpack
+    // Ensure that the '@' alias is properly resolved by webpack
     config.resolve.alias = {
       ...config.resolve.alias,
-      src: __dirname + '/src',
+      '@': __dirname + '/src',
     };
     return config;
   },
