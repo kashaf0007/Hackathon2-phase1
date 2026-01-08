@@ -4,6 +4,7 @@
 export async function GET(request: Request) {
   const apiUrl = process.env.NEXT_PUBLIC_API_URL;
   
+  
   return new Response(
     JSON.stringify({
       status: "success",
