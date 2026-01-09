@@ -46,3 +46,4 @@ jobs:
         
         # Push to the Hugging Face Space
         git push -f huggingface main
+        
