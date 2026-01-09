@@ -1,0 +1,48 @@
+name: Deploy to Hugging Face Space
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        submodules: false
+        fetch-depth: 0
+
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Install Hugging Face CLI
+      run: pip install huggingface_hub
+
+    - name: Login to Hugging Face
+      run: huggingface-cli login --token ${{ secrets.HF_TOKEN }}
+      
+    - name: Copy backend directory contents to temporary directory
+      run: |
+        mkdir -p temp_space
+        cp -r backend/* temp_space/
+        
+    - name: Push to Hugging Face Space
+      run: |
+        cd temp_space
+        git init
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+        git add .
+        git commit -m "Update from GitHub repository"
+        
+        # Add the Hugging Face remote
+        git remote add huggingface https://kashafaman123:${{ secrets.HF_TOKEN }}@huggingface.co/spaces/kashafaman123/todo-phase02
+        
+        # Push to the Hugging Face Space
+        git push -f huggingface main
