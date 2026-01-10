@@ -11,7 +11,7 @@ try:
     response = requests.options(
         f"{backend_url}/health",
         headers={
-            "Origin": "https://hackathon2-phase1-five.vercel.app",
+            "Origin": "https://hackathon2-phase1-five.vercel.app/docs",
             "Access-Control-Request-Method": "GET",
             "Access-Control-Request-Headers": "X-Requested-With"
         }
